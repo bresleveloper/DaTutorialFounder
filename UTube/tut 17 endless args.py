@@ -12,9 +12,9 @@ def DoPrecentzOnNumz(*precentz, **numz):
         return (percent * whole) / 100.0
 
     total=0
-    for x in numz.items():
+    for x in numz:
         print('numz valz', x)
-        total += x
+        total += numz[x]
     for p in precentz:
         total = percentage(p, total)
     print(total)
