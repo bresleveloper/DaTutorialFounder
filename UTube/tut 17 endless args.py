@@ -12,13 +12,14 @@ def DoPrecentzOnNumz(*precentz, **numz):
         return (percent * whole) / 100.0
 
     total=0
-    for x in numz:
-        total+=x
+    for x in numz.items():
+        print('numz valz', x)
+        total += x
     for p in precentz:
         total = percentage(p, total)
     print(total)
 
-#DoPrecentzOnNumz(precentz=[6,6,89,8,4,5,5,1,2,2,2,6,6,9,9,8], numz=60,80)
+DoPrecentzOnNumz(6,6,89,8,4,5,5,1,2,2,2,6,6,9,9,8, arp=60, berp=80)
 
 
 def test_var_args(f_arg, *argv):
@@ -35,3 +36,4 @@ def greet_me(**kwargs):
             print("%s == %s" % (key, value))
 
 greet_me(name="yasoob", loop='for')
+
